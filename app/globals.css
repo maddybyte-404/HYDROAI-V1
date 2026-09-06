@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg:#06110E; --fg:#ecf6f1; --muted:#9ab0a7; --accent:#22D3EE; --glow:rgba(34,211,238,.18); --theme-bg:#071A14; --theme-pattern:radial-gradient(circle at 25% 20%,rgba(34,211,238,.14),transparent 35%); }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:Arial, Helvetica, sans-serif; }
+a { color:inherit; text-decoration:none; }
+button, input, select, textarea { font:inherit; }
+:focus-visible { outline:3px solid #22D3EE; outline-offset:3px; }
+.grid-bg { background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px); background-size:46px 46px; }
+.technical-surface { background:var(--theme-pattern), linear-gradient(140deg,var(--theme-bg),#06110e 70%); transition:background .55s ease; }
+.signal-line { stroke:var(--accent); stroke-width:1.4; stroke-dasharray:5 8; opacity:.66; animation:flow 4s linear infinite; }
+@keyframes flow { to { stroke-dashoffset:-80; } }
+.status-rail { position:relative; }.status-rail::before { content:""; position:absolute; left:.65rem; top:1.5rem; bottom:1.5rem; width:1px; background:linear-gradient(var(--accent),transparent); }
+.section { max-width:1200px; margin:0 auto; padding:6rem 1.5rem; }
+.eyebrow { color:var(--accent); font-size:.75rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+.display { font-family:Arial, Helvetica, sans-serif; letter-spacing:-.055em; }
+.muted { color:var(--muted); }
+.card { border:1px solid rgba(236,246,241,.13); background:rgba(255,255,255,.035); border-radius:1rem; }
+.button { display:inline-flex; gap:.45rem; align-items:center; justify-content:center; border-radius:.6rem; padding:.8rem 1rem; font-weight:700; transition:.2s ease; }
+.button-primary { background:#19C37D; color:#071A14; }.button-primary:hover { filter:brightness(1.1); transform:translateY(-1px); }
+.button-secondary { border:1px solid rgba(236,246,241,.2); color:#ecf6f1; }.button-secondary:hover { background:rgba(255,255,255,.08); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }

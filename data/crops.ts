@@ -1,0 +1,4 @@
+import type { Status } from "./site";
+export const crops: {name:string;status:Status;note:string}[] = [
+ {name:"Lettuce",status:"BASELINE",note:"Initial NFT experimental baseline."},{name:"Basil",status:"VALIDATION",note:"Candidate for future validation."},{name:"Coriander",status:"LATER",note:"Future crop profile."},{name:"Mint",status:"LATER",note:"Future crop profile."},{name:"Spinach",status:"LATER",note:"Future crop profile."},{name:"Pak Choi",status:"LATER",note:"Future crop profile."},{name:"Microgreens",status:"LATER",note:"Future crop profile."},{name:"Tomato",status:"FUTURE",note:"Different crop and system validation required."},{name:"Cucumber",status:"FUTURE",note:"Different crop and system validation required."},{name:"Pepper / Chilli",status:"FUTURE",note:"Different crop and system validation required."},{name:"Strawberry",status:"FUTURE",note:"Different crop and system validation required."}
+];

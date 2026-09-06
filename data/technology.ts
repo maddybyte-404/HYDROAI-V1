@@ -1,0 +1,9 @@
+import type { Status } from "./site";
+export interface Technology { id:string; name:string; what:string; why:string; role:string; status:Status; parameters:string[]; }
+export const technologies: Technology[] = [
+ {id:"fusion",name:"Sensor fusion",what:"Contextual interpretation of multiple imperfect signals.",why:"A farm is a connected system, not a collection of isolated readings.",role:"Combines root-zone, environmental, plant and intervention data.",status:"DEVELOPING",parameters:["pH","EC","flow","temperature","humidity","light","water level","camera"]},
+ {id:"iot",name:"IoT & connectivity",what:"Modular field instrumentation and local connectivity.",why:"Reliable measurement is the base layer for every later decision.",role:"Supports ESP32-based sensing and controls development.",status:"DEVELOPING",parameters:["sensors","control outputs","local network"]},
+ {id:"edge",name:"Edge intelligence",what:"Local processing close to the hydroponic system.",why:"Enables responsive operation without unnecessary cloud dependency.",role:"Prepares local logging, vision and anomaly workflows.",status:"DEVELOPING",parameters:["local logs","camera","alerts"]},
+ {id:"vision",name:"Computer vision",what:"Plant-image analysis for health indicators.",why:"Plant state adds biological context to sensor readings.",role:"Current PlantAI work establishes an initial lettuce baseline.",status:"VALIDATION",parameters:["image","morphology","colour","health"]},
+ {id:"control",name:"Safety-constrained control",what:"Validated recommendations that may later be safely automated.",why:"Autonomy must follow evidence, validation and safeguards.",role:"Defines a future control boundary; it is not currently presented as autonomous farm operation.",status:"FUTURE",parameters:["limits","override","validation"]}
+];
